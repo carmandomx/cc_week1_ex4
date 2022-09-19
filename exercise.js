@@ -10,21 +10,22 @@
 
 */
 
-
-
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const pairTheSum = (numbers, target) => {
-    let res = false;
     /* Only make changes below this comment */
-    
+    let currIndex = 0; // define beginning of iteration
+    const values = []; // visited values
+    while (currIndex < numbers.length) {
+        // max amount of iterations
+        const complement = target - numbers[currIndex]; // get the value we are looking for
+        if (values.includes(complement)) return true; // return true if we already have visited that value
+        values.push(numbers[currIndex]); // add the curr number to the visited values
+        currIndex++; // continue with next number
+    }
     /* Only make changes below this comment */
 
-    return res;
-}
-
-
-
-
+    return false;
+};
 
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.pairTheSum = pairTheSum;
