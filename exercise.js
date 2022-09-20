@@ -14,7 +14,6 @@
 const pairTheSum = (numbers, target) => {
   let res = false;
   /* Only make changes below this comment */
-
   for (let i = 0; i < numbers.length; i++) {
     for (let j = 1; j < numbers.length; j++) {
       if (typeof numbers[i] !== "number" || typeof numbers[j] !== "number") {
@@ -24,7 +23,7 @@ const pairTheSum = (numbers, target) => {
       } else {
         let add = numbers[i] + numbers[j];
         if (add === target) {
-          return true;
+          return (res = true);
         }
       }
     }
