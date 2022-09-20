@@ -16,7 +16,24 @@
 const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
-    
+
+    //create two arrays, one for the pairs and the other one for the numbers of the array
+    let pairs = [];
+    let numList = [];
+    //loop array
+    numbers.forEach(element => {
+        //store the subtraction to diff
+        let diff = target - element;
+        if(numList.includes(diff)){
+            //if diff is in numList, add the pair to the array pairs
+            pairs.push([element,diff]);
+        }
+        numList.push(element);
+    });
+    //if pairs is not empty it means it have found at least a pair so return true
+    if(pairs.length>0){
+        return true;
+    }
     /* Only make changes below this comment */
 
     return res;
