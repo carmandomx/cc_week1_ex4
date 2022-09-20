@@ -15,8 +15,18 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const pairTheSum = (numbers, target) => {
     let res = false;
+    const n = numbers.length;
     /* Only make changes below this comment */
-    
+    for (let i = 0; i < n; i++){
+        for (let j = i + 1; j < n; j++){
+            if (numbers[i] + numbers[j] == target)
+            res=true
+        }
+        
+    }
+        
+
+
     /* Only make changes below this comment */
 
     return res;
