@@ -14,9 +14,19 @@
 
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const pairTheSum = (numbers, target) => {
-    let res = false;
-    /* Only make changes below this comment */
     
+    /* Only make changes below this comment */
+    let res = false;
+    const n = numbers.length;
+    // Search with nested loop if there are elements in the array that can be addends of the target
+    for (let i = 0; i < n; i++){
+        for (let j = i + 1; j < n; j++){
+            if (numbers[i] + numbers[j] == target)
+            res=true
+        }
+        
+    }
+
     /* Only make changes below this comment */
 
     return res;
