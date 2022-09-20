@@ -17,6 +17,22 @@ const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
     
+    let sum=0;
+    if(typeof numbers === 'undefined'){  //This sectemen is used to check if the values in the funtion are defined or not, if they are not it warns the user about it
+     return console.warn("put input in the function");
+ }
+     for(let i=0; i<numbers.length;i++){  //Here we simply use a nested for to do a sum of all values in the array between each other sort of like factorize a function
+         for(let j=0; j<numbers.length;j++){
+             sum=numbers[i]+numbers[j];
+             if(sum===target){
+                 res=true;
+             }
+             sum=0;
+         }
+     }
+   
+
+
     /* Only make changes below this comment */
 
     return res;
