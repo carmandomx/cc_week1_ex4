@@ -20,14 +20,14 @@ const pairTheSum = (numbers, target) => {
 
     /* Only make changes below this comment */
 
-    // With this "for" to go over each number on the array
+    // This "for" is to go over each number on the array
     for (let i = 0; i < numbers.length - 1; i++) {
 
-        //This one will take the other number to compare
+        //This one will take the other number to compare starting whit the second position
         for (let j = i + 1; j < numbers.length; j++) {
 
-            /* Then do the sum and compares if matchs with the target */
-            if (numbers[i] + numbers[j] === target) {
+            /* Then do the sum and compares if matchs with the target number */
+            if (numbers[i] + numbers[j] === target) { // numbers[0] + numbers[1]
                 
                 /* Sets true the flag to indicate that exist a pair in the array
                 which the resoult is the "target" number */
