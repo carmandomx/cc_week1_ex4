@@ -16,14 +16,21 @@
 const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
-    
+
     /* Only make changes below this comment */
+
+    //we create a for loop to go over each element on the array, we create another loop inside to compare the elements of each array
+    for (let i = 0; i < numbers.length; i++) {
+        for (let j = 0; j < numbers.length; j++) {
+
+            //We do this if to check the elements and see if target can be formed by the integers.
+            if (numbers[i] + numbers[j] == target)
+                res = true;
+        }
+    }
 
     return res;
 }
-
-
-
 
 
 /** DO NOT CHANGE THE LINE BELOW **/
