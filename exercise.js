@@ -10,21 +10,26 @@
 
 */
 
-
-
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const pairTheSum = (numbers, target) => {
-    let res = false;
-    /* Only make changes below this comment */
-    
-    /* Only make changes below this comment */
+  let res = false;
+  /* Only make changes below this comment */
+  //Use for loop inside the another for loop to iterate the array with two pointers
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = 1; j < numbers.length; j++) {
 
-    return res;
-}
+      //Compare if the sum of the two pointers is equal to the target
+      if (numbers[i] + numbers[j] === target) {
+        res = true;
+        return res;
+      }
+    }
+  }
 
+  /* Only make changes below this comment */
 
-
-
+  return res;
+};
 
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.pairTheSum = pairTheSum;
