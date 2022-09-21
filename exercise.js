@@ -16,6 +16,15 @@
 const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
+
+    for(i=0; i<numbers.length; i++) { //create a for loop to iterate the elements in the array  
+            for(j= i+1; j<numbers.length; j++) { //inner loop to grab two elements of the array at the same time
+                if(numbers[i]+numbers[j]==target) { //if any combination of the elements of the array gives us our target, return true
+                    res = true;
+                }
+            }
+    }
+
     
     /* Only make changes below this comment */
 
