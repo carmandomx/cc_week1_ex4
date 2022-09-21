@@ -10,21 +10,29 @@
 
 */
 
-
-
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const pairTheSum = (numbers, target) => {
     let res = false;
-    /* Only make changes below this comment */
-    
-    /* Only make changes below this comment */
+    //Variable to store the sum
+    let sum = 0;
+
+    //For loop to iterate through the whole array
+    for (let i = 0; i < numbers.length; i++) {
+        for (let j = 0; j < numbers.length; j++) {
+
+            //Process to check if the positions in the array are the same
+            //If not, a sum will be done and check if the sum its the same as the target value
+            if (i !== j) {
+                sum = numbers[i]+numbers[j]
+                if (sum == target){ return res = true }
+            }
+           
+        }
+        
+    }
 
     return res;
 }
-
-
-
-
 
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.pairTheSum = pairTheSum;
