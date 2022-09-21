@@ -16,10 +16,10 @@
 const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
-    for(let i = 0; i < numbers.length; i++){
-        for(let j = i+1; j < numbers.length; j++){
-            if(numbers[i] + numbers[j] == target){
-                res = true;
+    for(let i = 0; i < numbers.length; i++){  /*added a counter to go through the entirety of the array*/
+        for(let j = i+1; j < numbers.length; j++){ /*continued the counter individually*/
+            if(numbers[i] + numbers[j] == target){ /*sum every individual intenger in the array until it matches the target*/
+                res = true; /*change the result*/
             }
         }
 
