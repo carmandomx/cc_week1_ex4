@@ -10,21 +10,29 @@
 
 */
 
-
-
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const pairTheSum = (numbers, target) => {
-    let res = false;
-    /* Only make changes below this comment */
-    
-    /* Only make changes below this comment */
+  let res = false;
+  /* Only make changes below this comment */
 
-    return res;
-}
+  /* If i wanted to know if any combination of n numbers in the array matches the sum, I will need to use recursion */
 
+  /* for loop that will check the first element of a pair */
+  for (let i = 0; i < numbers.length - 1; i++) {
+    /* for loop that will check the second element of a pair */
+    for (let j = i + 1; j < numbers.length; j++) {
+      /* if conditinal to check if matches the target */
+      if (numbers[i] + numbers[j] === target) {
+        /* change res value to true if one match is found */
+        res = true;
+      }
+    }
+  }
 
+  /* Only make changes below this comment */
 
-
+  return res;
+};
 
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.pairTheSum = pairTheSum;
