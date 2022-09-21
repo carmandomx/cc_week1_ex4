@@ -17,14 +17,26 @@ const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
     
+    //Control flow (for) to iterale the elements in the array*/
+
+    for(i=0; i<numbers.length; i++) 
+
+//inner two elements of the array at the same time
+    { 
+    for(j= i+1; j<numbers.length; j++) 
+    { 
+
+ // Condition to return a true if i or J = target
+        if(numbers[i]+numbers[j]==target) { 
+            res = true;
+        }
+    }
+}
+
     /* Only make changes below this comment */
 
     return res;
 }
-
-
-
-
 
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.pairTheSum = pairTheSum;
