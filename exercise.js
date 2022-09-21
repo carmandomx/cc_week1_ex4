@@ -16,7 +16,13 @@
 const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
-    
+    for (let i = 0; i < numbers.length - 1; i++) {      //Create a For loop that starts on 0 (first number) and goes over all the numbers 
+        for (let j = i + 1; j < numbers.length; j++) {  //Create another For loop that starts ahead of the first number (i + 1) and goes over all the numbers as well
+            //Therefore the second loop will go over the numbers while the first loop stays on the first number and so on
+             if (numbers[i] + numbers[j] == target)     //Sum the current pair of numbers and compare the result to the target number
+             res = true;                                //Re-assign "res" to true if the comparation returns true
+        }
+    }
     /* Only make changes below this comment */
 
     return res;
