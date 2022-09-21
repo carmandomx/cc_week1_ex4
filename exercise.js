@@ -16,16 +16,26 @@
 const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
-    
-    /* Only make changes below this comment */
-
+    //We make two for loops to go through the numbers array, the first one help me to store, one number of the array
+    //an make a combination with a second one to test a condition
+   
+    for(let i=0; i<numbers.length; i++){
+        let firstN = numbers[i];
+        for(let j=i+1; j<numbers.length; j++){
+            let secondN = numbers[j];    
+     //this the second one help me to store a second variable, and to test the condition, the sum of my numbers have to
+     //be equal to the target number, if the case applied I change the state of "res" vairable to true
+            if((firstN+secondN)==target){                
+                res = true;                
+            }
+        }
+    }    
+    //finally we return the variable "res", it will be true or false depending the condition evaluation
+    /* Only make changes below this comment */    
     return res;
 }
 
 
-
-//just a comment
-//another comment
 
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.pairTheSum = pairTheSum;
