@@ -17,14 +17,27 @@ const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
     
+        //j is a counter to loop into the search for the number that will go backwards
+        //in the second condition of the if statement
+        let j = numbers.length;
+        //we do a for loop to iterate "i", this is for the first condition
+    for (let i = 0; i < numbers.length; i++){
+        //j is going down
+        j--
+        
+        if(numbers[i] + numbers[i+1] === target || numbers[i] + numbers[j] === target)
+        {
+            //if any condition is met, res = true;
+            res = true;
+        }
+    }
+    //if nothing was detected as true, just return the original answer. res = false;
+    return res;
+
     /* Only make changes below this comment */
 
     return res;
 }
-
-
-
-
 
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.pairTheSum = pairTheSum;
