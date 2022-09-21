@@ -16,6 +16,27 @@
 const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
+
+    //First I declare two variables to traverse the array from beginning to end and vice versa.
+    let i = 0;
+    let x = numbers.length - 1;
+
+    while (i < x) { //Then I create a while loop so that I can loop through the array in both directions adding pairs in both directions.
+
+        if (numbers[i] + numbers[x] ==  target){ //Condition determining whether the sum was found.
+
+            res = true; //The return value is converted to true.
+            break; //Exiting the loop.
+
+        } else if (numbers[i] + numbers[x] < target){ //Condition that determines if sum is greater than target.
+
+            i++; //I increment the value of i to obtain another array position in the next loop turn from beginning to end.
+
+        } else{ ////Condition that determines if sum is less than target.
+
+            x--; //Decrement to x to get another position of the array from end to beginning.
+        }
+    }
     
     /* Only make changes below this comment */
 
