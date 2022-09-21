@@ -11,19 +11,24 @@
 */
 
 
-
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
-    
+    for (var i = 0; i < numbers.length; i++) {
+
+        for ( var j = i + 1; j < numbers.length; j++ ) { 
+
     /* Only make changes below this comment */
-
+        if (numbers[i] + numbers[j] === target){
+            
+            return true;
+                    }
+                }
+             }
+        
     return res;
-}
-
-
-
+ }
 
 
 /** DO NOT CHANGE THE LINE BELOW **/
