@@ -17,6 +17,22 @@ const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
     
+    for (let j=0; j<numbers.length; j++) //Checking the whole array
+    {
+        for (let k=0; k<numbers.length; k++) //Checking each index
+        {
+            if(j!=k) //cannot repeat indexes
+            {
+                const valuex = numbers[j]+numbers[k]; //Making the sum and pasing to valuex
+                if (valuex == target) 
+                {
+                    res = true;
+                }
+
+            }
+        }
+    }    
+    
     /* Only make changes below this comment */
 
     return res;
