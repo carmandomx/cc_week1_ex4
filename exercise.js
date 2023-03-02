@@ -16,15 +16,23 @@
 const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
-    
+    for (let i = 0; i < numbers.length; i++){ //Iterating the first element
+        for (let j = i + 1; j < numbers.length; j++) {//Iterating the second adjacent element
+            if (numbers[i] + numbers[j] === target){//comparing with the target
+                return res = true;//if the comparation is true change the value of res
+            }
+        }
+    }
     /* Only make changes below this comment */
 
     return res;
 }
 
 
+num1 = [1, 2, 3]
+num2 = [3, 5, 7]
 
-
-
+console.log(pairTheSum(num1, 5))//true
+console.log(pairTheSum(num2, 6))//false
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.pairTheSum = pairTheSum;
