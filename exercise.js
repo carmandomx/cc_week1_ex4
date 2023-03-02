@@ -15,16 +15,17 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const pairTheSum = (numbers, target) => {
     let res = false;
-    /* Only make changes below this comment */
-    
-    /* Only make changes below this comment */
+    let length_numbers=numbers.length
+    for (let i=0;i<length_numbers-1;i++){
+        for (let j=i+1;j<length_numbers;j++){
+            if (numbers[i]+numbers[j]===target){
+                res = true
+            }
+        }
+    }
 
     return res;
 }
-
-
-
-
 
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.pairTheSum = pairTheSum;
