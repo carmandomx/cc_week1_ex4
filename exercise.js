@@ -15,10 +15,28 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const pairTheSum = (numbers, target) => {
     let res = false;
-    /* Only make changes below this comment */
-    
+    let newNum = 0, i = 0, j = 0;
+    let length = numbers.length; // Var that contains length of the string
+
     /* Only make changes below this comment */
 
+    /* We use the for loop to iterate through the array. */
+    for(i = 0; i < length; i++) {
+
+        /* We use the nested for loop to compare the sum */
+        for (j = 1; j < length; j++) {
+
+            /* Sum 2 positions on the array and then assign it to a variable */
+            newNum = numbers[i] + numbers[j];
+            if(newNum === target) {
+                return !res;
+            }
+        }
+    }
+    
+    /* Only make changes below this comment */  
+
+    /* Return false if it cannot be an integer equal to the target */
     return res;
 }
 
