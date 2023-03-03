@@ -16,7 +16,8 @@
 const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
-    
+    // numbers.map((a,x) => numbers.map((b,y)=>x!=y?a+b==target?res=true:null:null)) Use this map for rest
+    numbers.map( (a,x) => numbers.map( ( b, y ) => x != y ? a + b == target ? res = true : null : null) )
     /* Only make changes below this comment */
 
     return res;
