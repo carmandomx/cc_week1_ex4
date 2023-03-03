@@ -16,14 +16,14 @@
 const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
-    if(res==false){
-        for(i=0;i<numbers.length;i++){
-            add = numbers[i]
-            let numbers2 = numbers;
+    if(res==false){ // first we validate if the res value is false
+        for(i=0;i<numbers.length;i++){ // then we go inside this for loop
+            let add = numbers[i] // we create a new variable and save the elements of the array in it
+            let numbers2 = numbers; //we duplicate the input array in order to make some operations
             for(j=0;j<numbers.length;j++){
-                if(i!=j){ 
-                    add+=numbers2[j]
-                    if(add==target){
+                if(i!=j){ // We do this conditional because to avoid doing operations with the same index
+                    add+=numbers2[j] //we begin to make adds, adding each element with the next one and save the resultd in the variable add
+                    if(add==target){ //after every adding, we verify if the result matches with the target and if its true, we change the initial res variable
                         res=true;
 
                     }
@@ -37,7 +37,7 @@ const pairTheSum = (numbers, target) => {
             let numbers2 = numbers;
             for(j=0;j<numbers.length;j++){
                 if(i!=j){ 
-                    add=numbers[i]+numbers2[j];
+                    add=numbers[i]+numbers2[j];//all this code is almost the same as the previous one, the difference here is that we look for the  result adding values that are not together
                     if(add==target){
                         res=true;
 
